@@ -34,7 +34,9 @@ export async function getStaticProps() {
     return {
         props:{
             meetups: DUMMY_MEETUPS
-        }
+        },
+        revalidate: 10 // time in seconds page is going to revaluate
+        //remember static page are generated at building time
     }
 }
 
